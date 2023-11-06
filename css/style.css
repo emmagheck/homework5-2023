@@ -112,14 +112,14 @@ solid 2px border using #45ADAD,
 
       /* Step 13. Modify the first header (the one not inside main) so that it remains visible at the top of the screen even as we scroll down. Make sure that it is always visible. You can see an example of this in the video and in the screenshot at 1200px when scrolled*(image updated 2/21/23). This is a challenge problem. You should not give or receive help when completing it. */
 
-      header:nth-child(2) {
+      /* header:nth-child(2) {
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         top: 0;
 
-      }
+      } */
 }
 
 /* Step 14. The logo class should appear but not be animated if prefers-reduced-motion is selected in the accessibility preferences.  */
