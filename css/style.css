@@ -22,6 +22,8 @@ body {
     font-family: 'Poppins', serif;
     background-image: url("../images/concrete_seamless.png");
     background-color: #f1f1f1;
+    padding-top: 10px; 
+    /* added padding-top because header was covering first content in the body */
 }
 
 /* Step 3. Edit the css for the header tag (all instances) to use flex to match our example. */
@@ -52,42 +54,35 @@ solid 2px border using #45ADAD,
 
 
 
-/* .pricing {
-    overflow: hidden;
-} */
 
 
 /* Step 7. Edit the css for the card class to match our example. Achieve this by using a flex-property to specify an initial “size” of 450px.  You need to think about this from a “flex” perspective and realize that flex-direction will affect the size of the elements.  You can see that in the mobile view they all have the same width.  */
-/* .pricing {
-    display: flex;
-} */
 
 .card {
     flex-basis: 450px;
 }
 
+
+/* Step 8. Edit the css for the pricing class to match our example. You should use flex and the cards should be centered both horizontally and vertically. */
 .pricing {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    align-items: center;
 }
 
 /* Step 9. Style the images in the gallery class. These elements will have a solid 10px border with a color of #50C7C7, 10px margin on all four sides and a width of 300px.   */
 .gallery > * {
     border: solid 10px #50C7C7;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 10px;
     width: 300px;
 }
 
 /* Step 10. Edit the css for the gallery class to use flex to match our example. (You may want to look at the screen shots from 1200px and 1500px as well -  the changes are not from media queries, but from the use of flex.) */
 .gallery {
     display: flex;
-    flex: initial;
+    /* flex: initial; */
     flex-wrap: wrap;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 
@@ -113,24 +108,54 @@ solid 2px border using #45ADAD,
         flex-basis: 275px;
     }
 
-    .card h3{
-        
-      }
+
 
       /* Step 13. Modify the first header (the one not inside main) so that it remains visible at the top of the screen even as we scroll down. Make sure that it is always visible. You can see an example of this in the video and in the screenshot at 1200px when scrolled*(image updated 2/21/23). This is a challenge problem. You should not give or receive help when completing it. */
 
-      /* header:first-of-type {
+      header:nth-child(2) {
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
-        
-      } */
+        top: 0;
+
+      }
 }
 
-
+/* Step 14. The logo class should appear but not be animated if prefers-reduced-motion is selected in the accessibility preferences.  */
 @media (prefers-reduced-motion: reduce) {
     #logo {
+        visibility: visible;
         animation: none
     }
+}
+
+@media print and (orientation: portrait) {
+    /* Step 15. Change the font on your body to Arial with a backup value of  Helvetica */
+    /* Step 16. The background image should be removed */
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: none;
+    }
+    /* Step 17. Edit the nav/nav_links elements so that they are spaced according to the image above */
+    .nav_links {
+        display: flex;
+        flex-direction: row;
+    }
+    /* Step 18. Edit the pricing class so that the elements align along the bottom.  As long as it aligns along the bottom we don't care if the cards aren't the same height. */
+    .pricing {
+        align-items: flex-end;
+    }
+
+
+    /* Step 19. The card elements should have a solid border 2px of #45ADDD and use flex-basis of 325px. */
+    .card {
+        border: 2px solid #45ADDD;
+        flex-basis: 325px;
+    }
+
+    /* Step 20. No part of the gallery should be visible */
+
+    /* Step 21. Without using list-style-type add the thumbs up entity as shown in the cards. This is a challenge problem. You should not give or receive help when completing it.**For some people the thumbs up is not printing as yellow. That is fine. */
+
 }
