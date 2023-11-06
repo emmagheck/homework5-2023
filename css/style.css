@@ -75,11 +75,13 @@ solid 2px border using #45ADAD,
     border: solid 10px #50C7C7;
     margin: 10px;
     width: 300px;
+    justify-content: center
 }
 
 /* Step 10. Edit the css for the gallery class to use flex to match our example. (You may want to look at the screen shots from 1200px and 1500px as well -  the changes are not from media queries, but from the use of flex.) */
 .gallery {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     /* align-items: center; */
     justify-content: center;
