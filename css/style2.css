@@ -98,7 +98,7 @@ Step 7. Edit the css for the card class to match our example. Achieve this by us
         text-align: center;
         justify-content: space-between;
     }
-    
+
     .nav_links {
         display: flex;
         flex-direction: row;
@@ -115,6 +115,14 @@ Step 7. Edit the css for the card class to match our example. Achieve this by us
     }
 
     /* Step 13. Modify the first header (the one not inside main) so that it remains visible at the top of the screen even as we scroll down. Make sure that it is always visible. You can see an example of this in the video and in the screenshot at 1200px when scrolled*(image updated 2/21/23). This is a challenge problem. You should not give or receive help when completing it.  */
+    header:nth-child(2) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+
+      }
 }
 
 
@@ -134,26 +142,31 @@ Step 7. Edit the css for the card class to match our example. Achieve this by us
 
 
 /* The following specifications are for when the page is printed in portrait mode.  */
-@media print and (orientation: portrait) {
+@media print {
     /* Step 15. Change the font on your body to Arial with a backup value of  Helvetica */
    body {
-        font-family: Arial, Helvetica, sans-serif !important;
+        font-family: Arial, Helvetica, sans-serif;
     }
 
     /* Step 16. The background image should be removed.  */
     body {
-        background-image: hidden !important;
+        background-image: hidden;
     }
 
     /* Step 17. Edit the nav/nav_links elements so that they are spaced according to the image above. */
+
     .nav_links {
-        display: flex !important;
-        flex-direction: row !important;
+        display: flex;
+        flex-direction: row;
+        /* justify-content: space-between; */
+
     }
 
     /* Step 18. Edit the pricing class so that the elements align along the bottom.  As long as it aligns along the bottom we don't care if the cards aren't the same height. */
     .pricing {
-        align-items: flex-end !important;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
     }
 
     /* Step 19. The card elements should have a solid border 2px of #45ADDD and use flex-basis of 325px.  */
@@ -168,4 +181,8 @@ Step 7. Edit the css for the card class to match our example. Achieve this by us
     }
 
     /* Step 21. Without using list-style-type add the thumbs up entity as shown in the cards. This is a challenge problem. You should not give or receive help when completing it.**For some people the thumbs up is not printing as yellow. That is fine */
+    .card li:nth-child(2):after {
+        content: '\1F44D';
+        display: inline;
+    }
 }
