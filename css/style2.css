@@ -40,6 +40,10 @@ header {
 
 /* Step 5. Style the links so that they have the same color even after they have been visited. This is a “challenge” problem. You should not give or receive help when completing it. */
 
+a:visited {
+    color: blue;
+}
+
 /* Step 6. Identify the proper selector to style ONLY those header elements that are direct children of a card class.  The required styling is the following:
 background: #288088,
 solid 2px border using #45ADAD,
@@ -116,7 +120,7 @@ Step 7. Edit the css for the card class to match our example. Achieve this by us
 
     /* Step 13. Modify the first header (the one not inside main) so that it remains visible at the top of the screen even as we scroll down. Make sure that it is always visible. You can see an example of this in the video and in the screenshot at 1200px when scrolled*(image updated 2/21/23). This is a challenge problem. You should not give or receive help when completing it.  */
     header:nth-child(2) {
-        position: fixed;
+        position: sticky;
         top: 0;
         left: 0;
         right: 0;
