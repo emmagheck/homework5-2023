@@ -137,23 +137,23 @@ Step 7. Edit the css for the card class to match our example. Achieve this by us
 @media print and (orientation: portrait) {
     /* Step 15. Change the font on your body to Arial with a backup value of  Helvetica */
    body {
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: Arial, Helvetica, sans-serif !important;
     }
 
     /* Step 16. The background image should be removed.  */
     body {
-        background-image: hidden;
+        background-image: hidden !important;
     }
 
     /* Step 17. Edit the nav/nav_links elements so that they are spaced according to the image above. */
     .nav_links {
-        display: flex;
-        flex-direction: row;
+        display: flex !important;
+        flex-direction: row !important;
     }
 
     /* Step 18. Edit the pricing class so that the elements align along the bottom.  As long as it aligns along the bottom we don't care if the cards aren't the same height. */
     .pricing {
-        align-items: flex-end;
+        align-items: flex-end !important;
     }
 
     /* Step 19. The card elements should have a solid border 2px of #45ADDD and use flex-basis of 325px.  */
