@@ -158,11 +158,17 @@ Step 7. Edit the css for the card class to match our example. Achieve this by us
 
     /* Step 17. Edit the nav/nav_links elements so that they are spaced according to the image above. */
 
-    .nav_links {
+    /* .nav_links {
         display: flex;
         flex-direction: row;
-        /* justify-content: space-between; */
+        justify-content: space-between;
 
+    } */
+    ul.nav_links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        column-gap: 300px;
     }
 
     /* Step 18. Edit the pricing class so that the elements align along the bottom.  As long as it aligns along the bottom we don't care if the cards aren't the same height. */
