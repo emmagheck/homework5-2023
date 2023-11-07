@@ -128,13 +128,12 @@ Step 7. Edit the css for the card class to match our example. Achieve this by us
 
 
 
-
-
 /* The following specifications are for when the user prefers reduced motion.   */
 @media (prefers-reduced-motion: reduce) {
     /* Step 14. The logo class should appear but not be animated if prefers-reduced-motion is selected in the accessibility preferences. */
     #logo {
-        animation: none;
+        width: 25px;
+        /* opacity: 0; */
     }
 }
 
@@ -150,7 +149,7 @@ Step 7. Edit the css for the card class to match our example. Achieve this by us
 
     /* Step 16. The background image should be removed.  */
     body {
-        background-image: hidden;
+        background-image: none;
     }
 
     /* Step 17. Edit the nav/nav_links elements so that they are spaced according to the image above. */
