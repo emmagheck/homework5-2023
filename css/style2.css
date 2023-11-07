@@ -118,6 +118,10 @@ Step 7. Edit the css for the card class to match our example. Achieve this by us
         flex-basis: 275px;
     }
 
+    .card {
+        flex-basis: 275px;
+    }
+
     /* Step 13. Modify the first header (the one not inside main) so that it remains visible at the top of the screen even as we scroll down. Make sure that it is always visible. You can see an example of this in the video and in the screenshot at 1200px when scrolled*(image updated 2/21/23). This is a challenge problem. You should not give or receive help when completing it.  */
     header:nth-child(2) {
         position: sticky;
@@ -138,6 +142,7 @@ Step 7. Edit the css for the card class to match our example. Achieve this by us
     #logo {
         width: 25px;
         /* opacity: 0; */
+        /* animation: none; */
     }
 }
 
@@ -157,13 +162,6 @@ Step 7. Edit the css for the card class to match our example. Achieve this by us
     }
 
     /* Step 17. Edit the nav/nav_links elements so that they are spaced according to the image above. */
-
-    /* .nav_links {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
-    } */
     ul.nav_links {
         display: flex;
         flex-direction: row;
